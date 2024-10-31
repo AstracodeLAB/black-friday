@@ -1,2 +1,32 @@
 @use './variables.scss' as *;
 
+.countdown {
+	display: flex;
+    gap: 8px;
+	font-family: $font-family-title;
+	text-transform: uppercase;
+
+	&__item {
+		// flex-direction: column;
+		text-align: center;
+		color: $primary;
+		box-shadow: 4px 4px 4px #000;
+
+		&-number {
+			margin: 0;
+			padding-top: 12px;
+			width: 60px;
+			height: 52px;
+			font-size: 38px;
+			background-color: $secondary;
+			border-radius: 10px 10px 0 0;
+		}
+
+		&-word {
+			margin: 0;
+			padding: 2px;
+			background-color: rgba(255, 255, 255, 0.04);
+			font-size: 9px;
+		}
+	}
+}
