@@ -1,17 +1,21 @@
 ---
+import '../styles/global.scss';
+
 import Layout from '../layouts/Layout.astro';
-import '../styles/global.scss'
+import Countdown from '../components/Countdown';
+import Button from '../components/Button.astro';
 ---
 
 <Layout
   title="Ofertas Black Friday en AstracodeLAB - Diseño y Desarrollo Web"
   description="Aprovecha nuestras ofertas de Black Friday para tu Landing Page o Portfolio. Contrata diseño y desarrollo web profesional y gana visibilidad para tu negocio."
 >
-
-
-<main class="main">
-  <p>HOLA</p>
-</main>
-
-
+  <main class="main">
+    <p>HOLA</p>
+    <section class="services"></section>
+    <section class="counter">
+      <Countdown />
+      <Button />
+    </section>
+  </main>
 </Layout>
