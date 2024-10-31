@@ -1,26 +1,16 @@
 ---
-import Logo from '../components/Logo.astro';
-import Title from '../components/Title.astro';
-import Card from '../components/Card.astro';
-import Price from '../components/Price.astro';
-import Countdown from '../components/Countdown.jsx';
-import Button from '../components/Button.astro';
-import Social from '../components/Social.astro';
+import Layout from '../layouts/Layout.astro';
+
 ---
 
-<header>
-  <Logo />
-  <Title />
-</header>
+<Layout
+  title='Black Friday'
+  description='Promociones Black Friday en AstracodeLAB'
+>
 
-<main>
-  <Countdown client:load/>
-  <Card>
-    <Price />
-    <Button />
-  </Card>
-</main>
+  <main>
 
-<footer>
-  <Social />
-</footer>
+  </main>
+
+
+</Layout>
