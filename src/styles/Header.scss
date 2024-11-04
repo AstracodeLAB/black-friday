@@ -4,10 +4,17 @@
     text-align: center;
     width: 80vw;
     border-bottom: 3px solid $secondary;
+    @media screen and (min-width: 768px) {
+        width: 70vw;
+    }
     
     &__img {
         width: 90px;
         margin-bottom: 10px;
+
+        @media screen and (min-width: 768px) {
+            width: 120px;
+        }
     }
 
     &__title {
@@ -17,6 +24,11 @@
             margin: 0;
             line-height: 0.9;
             font-size: 40px;
+            text-shadow: 4px 4px 4px #000;
+
+            @media screen and (min-width: 768px) {
+                font-size: 80px;
+            }
 
             &--black {
                 font-family: $font-family-black;
@@ -26,8 +38,11 @@
             &--friday {
                 font-family: $font-family-friday;
                 color: $red;
-                text-shadow: 4px 4px 4px #000;
                 transform: translateX(30px);
+
+                @media screen and (min-width: 768px) {
+                    transform: translateX(50px);
+                }
             }
         }
 
@@ -38,6 +53,11 @@
             margin: 0;
             line-height: 0.9;
             transform: translateX(20px);
+
+            @media screen and (min-width:768px) {
+                font-size: 25px;
+                transform: translateX(30px);
+            }
         }
     }
 }
