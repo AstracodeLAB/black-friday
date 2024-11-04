@@ -20,7 +20,7 @@ const BlackFridayCountdown = () => {
 			}
 		}, 1000);
 
-		return () => clearInterval(intervalId); // Limpia el intervalo al desmontar el componente
+		return () => clearInterval(intervalId);
 	}, []);
 
 	return (
