@@ -43,5 +43,15 @@
                 font-size: 11px;
             }
 		}
+
+		&-dots {
+			color: $primary;
+			font-size: 38px;
+			margin: auto 0;
+
+			&--hidden {
+				color: transparent;
+			}
+		}
 	}
 }
