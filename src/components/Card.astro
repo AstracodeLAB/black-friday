@@ -1,3 +1,15 @@
 ---
 import '../styles/Card.scss';
+const { title, description, large_description_title, large_description_items } = Astro.props;
 ---
+
+<article class='card'>
+	<div class='card-content'>
+		<h3>{title}</h3>
+		<p>{description}</p>
+		<h3>{large_description_title}</h3>
+		<ul>
+			<li>{large_description_items}</li>;
+		</ul>
+	</div>
+</article>
