@@ -18,16 +18,18 @@
     }
 
     &__title {
+        // max-width: 200px;
+        
 
         &-h1 {
             text-transform: uppercase;
             margin: 0;
             line-height: 0.9;
-            font-size: 40px;
+            font-size: 3rem;
             text-shadow: 4px 4px 4px #000;
 
             @media screen and (min-width: 768px) {
-                font-size: 80px;
+                font-size: 6rem;
             }
 
             &--black {
@@ -38,7 +40,7 @@
             &--friday {
                 font-family: $font-family-friday;
                 color: $red;
-                transform: translateX(30px);
+                transform: translateX(10px);
 
                 @media screen and (min-width: 768px) {
                     transform: translateX(50px);
@@ -49,10 +51,12 @@
         &-h2 {
             font-family: $font-family-subtitle;
             color: $primary;
-            font-size: 15px;
+            font-size: 1.2rem;
+            font-weight: lighter;
             margin: 0;
             line-height: 0.9;
             transform: translateX(20px);
+            display: inline;
 
             @media screen and (min-width:768px) {
                 font-size: 25px;
