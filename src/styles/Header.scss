@@ -1,5 +1,43 @@
 @use './variables.scss' as *;
 
 .header {
-    color: blue;
+    text-align: center;
+    width: 90vw;
+    border-bottom: 3px solid $secondary;
+    
+    &__img {
+        width: 100px;
+        margin-bottom: 15px;
+    }
+
+    &__title {
+
+        &-h1 {
+            text-transform: uppercase;
+            margin: 0;
+            line-height: 0.9;
+            font-size: 40px;
+
+            &--black {
+                font-family: $font-family-black;
+                color: $primary;
+            }
+
+            &--friday {
+                font-family: $font-family-friday;
+                color: $red;
+                text-shadow: 4px 4px 4px #000;
+                transform: translateX(30px);
+            }
+        }
+
+        &-h2 {
+            font-family: $font-family-subtitle;
+            color: $primary;
+            font-size: 15px;
+            margin: 0;
+            line-height: 0.9;
+            transform: translateX(20px);
+        }
+    }
 }
