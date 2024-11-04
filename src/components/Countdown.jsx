@@ -32,12 +32,12 @@ const BlackFridayCountdown = () => {
 				<p className='countdown__item-word'>días</p>
 			</article>
 			<article className='countdown__item'>
-				<p className='countdown__item-number'>{timeLeft.hours}</p>
+				<p className='countdown__item-number'>{timeLeft.hours}:</p>
 
 				<p className='countdown__item-word'>horas</p>
 			</article>
 			<article className='countdown__item'>
-				<p className='countdown__item-number'>{timeLeft.minutes}</p>
+				<p className='countdown__item-number'>{timeLeft.minutes}:</p>
 
 				<p className='countdown__item-word'>minutos</p>
 			</article>
