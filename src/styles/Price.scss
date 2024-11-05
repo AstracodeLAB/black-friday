@@ -8,17 +8,22 @@
   &__euros {
     margin: 0px;
     font-size: $p-price-size-mobile;
-  @media (min-width: 1024px) {
-    font-size: $p-price-size-desktop;
-  }
+
+    @media (min-width: 1024px) {
+      font-size: $p-price-size-desktop;
+    }
   }
 
   &__iva {
-    margin: 0;
+    margin: -5px;
     font-family: $font-family-friday;
     font-size: $p-info-iva-size-mobile;
+
+    @media (min-width: 1024px) {
+      font-size: $p-info-iva-size-desktop;
+    }
   }
 
-  
-  
+
+
 }
