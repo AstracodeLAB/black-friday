@@ -14,14 +14,15 @@ import Price from '../components/Price.astro';
 >
 	<main class='main'>
 		<p>HOLA</p>
+		<div class='separator'> 
+		</div>
 		<section class='services_section'>
 			{cardData.map((card) => <Card {...card} />)}
 		</section>
-    <div class='separator'></div>
-
 		<div class='price__desktop'>
 			<Price />
 		</div>
+
 		<section class='counter'>
 			<Countdown />
 			<Button />
