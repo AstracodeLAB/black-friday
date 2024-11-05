@@ -1,5 +1,70 @@
 @use './variables.scss' as *;
 
 .header {
-    color: blue;
+	text-align: center;
+	width: 80vw;
+	border-bottom: 3px solid $secondary;
+	@media screen and (min-width: 768px) {
+		width: 70vw;
+	}
+
+	&__img {
+		width: 90px;
+		margin-bottom: 10px;
+
+		@media screen and (min-width: 768px) {
+			width: 120px;
+		}
+	}
+
+	&__title {
+		// max-width: 200px;
+
+		&-h1 {
+			text-transform: uppercase;
+			margin: 0;
+			line-height: 0.9;
+			font-size: 3rem;
+			text-shadow: 4px 4px 4px #000;
+
+			@media screen and (min-width: 768px) {
+				font-size: 6rem;
+			}
+
+			&--black {
+				font-family: $font-family-black;
+				color: $primary;
+                font-weight: 100;
+			}
+
+			&--friday {
+				font-family: $font-family-friday;
+				background: $gradient-red;
+				-webkit-background-clip: text;
+                background-clip: text;
+				-webkit-text-fill-color: transparent;
+				transform: translateX(10px);
+
+				@media screen and (min-width: 768px) {
+					transform: translateX(50px);
+				}
+			}
+		}
+
+		&-h2 {
+			font-family: $font-family-subtitle;
+			color: $primary;
+			font-size: 1.2rem;
+			font-weight: lighter;
+			margin: 0;
+			line-height: 0.9;
+			transform: translateX(20px);
+			display: inline;
+
+			@media screen and (min-width: 768px) {
+				font-size: 25px;
+				transform: translateX(30px);
+			}
+		}
+	}
 }

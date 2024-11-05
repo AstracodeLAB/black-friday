@@ -1,5 +1,42 @@
 @use './variables.scss' as *;
 
 .footer {
-    color: green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $primary;
+    font-family: $font-family-friday;
+    gap: 12px;
+    position: absolute;
+    bottom: 0;
+    // padding-bottom: 10px;
+
+    &__p {
+        margin: 0;
+        font-size: 0.8rem;
+
+        @media screen and (min-width: 768px) {
+            font-size: 1rem;
+        }
+    }
+
+    &__nav {
+       display: flex;   
+       gap: 10px;    
+       
+       &-link {
+            color: $primary;
+            width: 24px;
+            height: 24px;    
+        }
+    }
+
+    &__web {
+        text-decoration: none;
+        color: $primary;
+        font-size: 0.8rem;
+        @media screen and (min-width: 768px) {
+            font-size: 1rem;
+        }
+    }
 }

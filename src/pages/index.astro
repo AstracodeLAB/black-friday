@@ -13,18 +13,16 @@ import Price from '../components/Price.astro';
 	description='Aprovecha nuestras ofertas de Black Friday para tu Landing Page o Portfolio. Contrata diseño y desarrollo web profesional y gana visibilidad para tu negocio.'
 >
 	<main class='main'>
-		<p>HOLA</p>
-		<div class='separator'> 
-		</div>
+		<div class='separator'></div>
 		<section class='services_section'>
 			{cardData.map((card) => <Card {...card} />)}
 		</section>
 		<div class='price__desktop'>
 			<Price />
 		</div>
-
 		<section class='counter'>
-			<Countdown />
+			<p class='counter__p'>Oferta válida hasta las 00:00 del viernes 29 de Noviembre</p>
+			<Countdown client:load />
 			<Button />
 		</section>
 	</main>

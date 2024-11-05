@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import '../styles/Countdown.scss';
 
 const BlackFridayCountdown = () => {
 	const targetDate = new Date('2024-11-29T00:00:00'); // Fecha de Black Friday
@@ -20,13 +21,31 @@ const BlackFridayCountdown = () => {
 			}
 		}, 1000);
 
-		return () => clearInterval(intervalId); // Limpia el intervalo al desmontar el componente
+		return () => clearInterval(intervalId);
 	}, []);
 
 	return (
-		<div>
-			<p>{`${timeLeft.days}d ${timeLeft.hours}h ${timeLeft.minutes}m ${timeLeft.seconds}s`}</p>
-		</div>
+		<section className='countdown'>
+			<article className='countdown__item'>
+				<p className='countdown__item-number'>{timeLeft.days}</p>
+				<p className='countdown__item-word'>días</p>
+			</article>
+			<p className='countdown__item-dots countdown__item-dots--hidden'>:</p>
+			<article className='countdown__item'>
+				<p className='countdown__item-number'>{timeLeft.hours}</p>
+				<p className='countdown__item-word'>horas</p>
+			</article>
+			<p className='countdown__item-dots'>:</p>
+			<article className='countdown__item'>
+				<p className='countdown__item-number'>{timeLeft.minutes}</p>
+				<p className='countdown__item-word'>minutos</p>
+			</article>
+			<p className='countdown__item-dots'>:</p>
+			<article className='countdown__item'>
+				<p className='countdown__item-number'>{timeLeft.seconds}</p>
+				<p className='countdown__item-word'>segundos</p>
+			</article>
+		</section>
 	);
 };
 

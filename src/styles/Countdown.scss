@@ -1,2 +1,60 @@
 @use './variables.scss' as *;
 
+.countdown {
+	display: flex;
+	font-family: $font-family-title;
+	text-transform: uppercase;
+
+    @media screen and (min-width: 768px) {
+       gap: 5px;
+    }
+
+	&__item {
+		text-align: center;
+		color: $primary;
+		box-shadow: 4px 4px 4px #000;
+		border-radius: 10px 10px 0 0;
+
+		&-number {
+			margin: 0;
+			padding-top: 5px;
+			width: 50px;
+			height: 52px;
+			font-size: 38px;
+			background-color: $secondary;
+			border-radius: 10px 10px 0 0;
+
+            @media screen and (min-width: 768px) {
+                width: 70px;
+                height: 60px;
+                padding-top: 15px;
+                font-size: 43px;
+            }
+		}
+
+		&-word {
+			margin: 0;
+			padding: 2px;
+			background-color: rgba(255, 255, 255, 0.04);
+			font-size: 9px;
+
+            @media screen and (min-width: 768px) {
+                font-size: 11px;
+            }
+		}
+
+		&-dots {
+			color: $primary;
+			font-size: 38px;
+			margin: 5px 0;
+
+			@media screen and (min-width: 768px) {
+				margin: 15px 0;
+			}
+
+			&--hidden {
+				color: transparent;
+			}
+		}
+	}
+}

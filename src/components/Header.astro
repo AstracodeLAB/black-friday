@@ -1,14 +1,19 @@
 ---
 import '../styles/Header.scss';
-import Logo from '../components/Logo.astro';
+
 ---
 
 <header class="header">
-  
-  <p>HOLA</p>  
-    <Logo />
-
-    
-
-   
+  <a 
+    href="https://astracodelab.com/" 
+    aria-label="Ir a la página principal de AstracodeLAB"
+    target="_blank"
+    rel="noopener noreferrer"> 
+    <img class="header__img" src="/images/Whitelogolab.webp" alt="Logo de AstracodeLAB">
+  </a>
+  <section class="header__title">
+    <h1 class="header__title-h1 header__title-h1--black">black</h1>
+    <h1 class="header__title-h1 header__title-h1--friday">friday</h1>
+    <h2 class="header__title-h2">Creamos webs</h2>
+</section>   
 </header>
