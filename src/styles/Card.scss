@@ -1,1 +1,105 @@
 @use './variables.scss' as *;
+
+.services {
+  width: $margin-mobile;
+  position: relative;
+
+  @media (min-width: 1024px) {
+    width: $margin-desktop;
+  }
+
+  &__box-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    @media (min-width: 768px) {
+     justify-content: center;
+    }
+
+  }
+
+  &__title {
+    font-size: $h3-size-mobile;
+    font-family: $font-family-title ;
+    color: $primary;
+  }
+
+
+  &__text {
+    padding: 10px;
+    margin-bottom: 0;
+    font-size: $p-size-mobile;
+    font-family: $font-family-subtitle;
+    color: $primary;
+  }
+
+  &__box-gradient {
+    background-color: rgba(85, 85, 85, 0.2);
+  }
+
+  &__icon {
+    text-align: end;
+    padding-right: 15px;
+    padding-bottom: 15px;
+  }
+
+  &__inside-box {
+    padding-bottom: 15px;
+  }
+
+  &__inside {
+    margin: 5px;
+    font-size: $h4-size-mobile;
+    font-family: $font-family-subtitle;
+    color: $primary;
+  }
+
+  &__inside-list {
+    padding-left: 0px;
+  }
+
+  &__inside-items {
+    font-size: $p-size-mobile;
+    font-family: $font-family-subtitle;
+    color: $primary;
+    list-style-type: none;
+    text-align: center;
+  }
+
+}
+
+.hide {
+  display: none;
+}
+
+
+.price__desktop {
+  display: none;
+}
+
+.price__mobile {
+  display: inline-block;
+  margin-top: 15px;
+  padding-left: 15px;
+}
+
+@media(min-width: 768px) {
+  .price__desktop {
+    display: inline-block;
+  }
+
+  .price__mobile {
+    display: none;
+  }
+}
+.separator {
+  @media(min-width: 768px) {
+    position: absolute;
+    right: 49vw;
+  background-color:rgb(245, 20, 20);
+   
+   width: 8px;
+   height: 90px;
+  }
+}

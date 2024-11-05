@@ -1,1 +1,24 @@
 @use './variables.scss' as *;
+
+
+.price {
+  font-family: $font-family-black;
+  color: $primary;
+
+  &__euros {
+    margin: 0px;
+    font-size: $p-price-size-mobile;
+  @media (min-width: 1024px) {
+    font-size: $p-price-size-desktop;
+  }
+  }
+
+  &__iva {
+    margin: 0;
+    font-family: $font-family-friday;
+    font-size: $p-info-iva-size-mobile;
+  }
+
+  
+  
+}

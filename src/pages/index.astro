@@ -5,6 +5,7 @@ import Card from '../components/Card.astro';
 import Layout from '../layouts/Layout.astro';
 import Countdown from '../components/Countdown';
 import Button from '../components/Button.astro';
+import Price from '../components/Price.astro';
 ---
 
 <Layout
@@ -13,9 +14,14 @@ import Button from '../components/Button.astro';
 >
 	<main class='main'>
 		<p>HOLA</p>
-		<section class='services'>
+		<section class='services_section'>
 			{cardData.map((card) => <Card {...card} />)}
 		</section>
+    <div class='separator'></div>
+
+		<div class='price__desktop'>
+			<Price />
+		</div>
 		<section class='counter'>
 			<Countdown />
 			<Button />
