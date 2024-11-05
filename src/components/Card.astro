@@ -35,8 +35,6 @@ let isVisible = false;
 	function toggleVisibility(el: HTMLElement) {
 		el.parentElement.querySelector('.services__inside-box').classList.toggle('hide');
 	}
-	console.log('1');
-	console.log(document.querySelectorAll('.services__icon'));
 	document
 		.querySelectorAll('.services__icon')
 		.forEach((el) => el.addEventListener('click', () => toggleVisibility(el)));
