@@ -6,11 +6,10 @@
 	text-transform: uppercase;
 
     @media screen and (min-width: 768px) {
-       gap: 12px;
+       gap: 5px;
     }
 
 	&__item {
-		// flex-direction: column;
 		text-align: center;
 		color: $primary;
 		box-shadow: 4px 4px 4px #000;
@@ -48,6 +47,10 @@
 			color: $primary;
 			font-size: 38px;
 			margin: 5px 0;
+
+			@media screen and (min-width: 768px) {
+				margin: 15px 0;
+			}
 
 			&--hidden {
 				color: transparent;
