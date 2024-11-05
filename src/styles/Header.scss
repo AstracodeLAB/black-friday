@@ -1,67 +1,69 @@
 @use './variables.scss' as *;
 
 .header {
-    text-align: center;
-    width: 80vw;
-    border-bottom: 3px solid $secondary;
-    @media screen and (min-width: 768px) {
-        width: 70vw;
-    }
-    
-    &__img {
-        width: 90px;
-        margin-bottom: 10px;
+	text-align: center;
+	width: 80vw;
+	border-bottom: 3px solid $secondary;
+	@media screen and (min-width: 768px) {
+		width: 70vw;
+	}
 
-        @media screen and (min-width: 768px) {
-            width: 120px;
-        }
-    }
+	&__img {
+		width: 90px;
+		margin-bottom: 10px;
 
-    &__title {
-        // max-width: 200px;
-        
+		@media screen and (min-width: 768px) {
+			width: 120px;
+		}
+	}
 
-        &-h1 {
-            text-transform: uppercase;
-            margin: 0;
-            line-height: 0.9;
-            font-size: 3rem;
-            text-shadow: 4px 4px 4px #000;
+	&__title {
+		// max-width: 200px;
 
-            @media screen and (min-width: 768px) {
-                font-size: 6rem;
-            }
+		&-h1 {
+			text-transform: uppercase;
+			margin: 0;
+			line-height: 0.9;
+			font-size: 3rem;
+			text-shadow: 4px 4px 4px #000;
 
-            &--black {
-                font-family: $font-family-black;
-                color: $primary;
-            }
+			@media screen and (min-width: 768px) {
+				font-size: 6rem;
+			}
 
-            &--friday {
-                font-family: $font-family-friday;
-                color: $red;
-                transform: translateX(10px);
+			&--black {
+				font-family: $font-family-black;
+				color: $primary;
+			}
 
-                @media screen and (min-width: 768px) {
-                    transform: translateX(50px);
-                }
-            }
-        }
+			&--friday {
+				font-family: $font-family-friday;
+				background: $gradient-red;
+				-webkit-background-clip: text;
+                background-clip: text;
+				-webkit-text-fill-color: transparent;
+				transform: translateX(10px);
 
-        &-h2 {
-            font-family: $font-family-subtitle;
-            color: $primary;
-            font-size: 1.2rem;
-            font-weight: lighter;
-            margin: 0;
-            line-height: 0.9;
-            transform: translateX(20px);
-            display: inline;
+				@media screen and (min-width: 768px) {
+					transform: translateX(50px);
+				}
+			}
+		}
 
-            @media screen and (min-width:768px) {
-                font-size: 25px;
-                transform: translateX(30px);
-            }
-        }
-    }
+		&-h2 {
+			font-family: $font-family-subtitle;
+			color: $primary;
+			font-size: 1.2rem;
+			font-weight: lighter;
+			margin: 0;
+			line-height: 0.9;
+			transform: translateX(20px);
+			display: inline;
+
+			@media screen and (min-width: 768px) {
+				font-size: 25px;
+				transform: translateX(30px);
+			}
+		}
+	}
 }
