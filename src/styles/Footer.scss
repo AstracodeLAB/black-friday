@@ -13,6 +13,7 @@
 
     &__p {
         margin: 0;
+        font-size: 0.8rem;
     }
 
     &__nav {
@@ -29,5 +30,6 @@
     &__web {
         text-decoration: none;
         color: $primary;
+        font-size: 0.8rem;
     }
 }
