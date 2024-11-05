@@ -4,46 +4,62 @@
 	text-align: center;
 	width: 80vw;
 	border-bottom: 3px solid $secondary;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top:25px;
+  padding-bottom: 15px;
+  gap:10px;
+
 	@media screen and (min-width: 768px) {
 		width: 70vw;
+    align-items: start;
+    gap: 0px;
+
 	}
 
 	&__img {
 		width: 90px;
-		margin-bottom: 10px;
+
 
 		@media screen and (min-width: 768px) {
 			width: 120px;
+      margin-right: -50px;
 		}
 	}
 
 	&__title {
-		// max-width: 200px;
+    @media screen and (min-width: 768px) {
+      padding-top: 19px;
+    }
 
 		&-h1 {
 			text-transform: uppercase;
 			margin: 0;
 			line-height: 0.9;
-			font-size: 3rem;
-			text-shadow: 4px 4px 4px #000;
-
+			font-size: $h1-size-mobile;
+      
+      
 			@media screen and (min-width: 768px) {
-				font-size: 6rem;
+        font-size: 6rem;
 			}
-
+      
 			&--black {
-				font-family: $font-family-black;
+        font-family: $font-family-black;
 				color: $primary;
-                font-weight: 100;
+        font-weight: 100;
+        text-shadow: 4px 4px 4px #000;
 			}
 
 			&--friday {
 				font-family: $font-family-friday;
-				background: $gradient-red;
+				background: $red;
+				color: transparent;
 				-webkit-background-clip: text;
                 background-clip: text;
-				-webkit-text-fill-color: transparent;
 				transform: translateX(10px);
+        text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
 
 				@media screen and (min-width: 768px) {
 					transform: translateX(50px);
@@ -52,18 +68,18 @@
 		}
 
 		&-h2 {
-			font-family: $font-family-subtitle;
-			color: $primary;
-			font-size: 1.2rem;
-			font-weight: lighter;
 			margin: 0;
 			line-height: 0.9;
-			transform: translateX(20px);
-			display: inline;
+      margin-left: 25px;
+      padding-top:5px;
+			font-family: $font-family-subtitle;
+			color: $primary;
+			font-size: $h2-size-mobile;
+			font-weight: lighter;
 
 			@media screen and (min-width: 768px) {
-				font-size: 25px;
-				transform: translateX(30px);
+        font-size: $h2-size-desktop;
+        margin-left: 250px;
 			}
 		}
 	}

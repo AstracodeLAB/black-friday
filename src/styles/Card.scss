@@ -93,13 +93,3 @@
     display: none;
   }
 }
-.separator {
-  @media(min-width: 768px) {
-   position: absolute;
-   top:120px;
-   right: 49.7%;
-   background-color:rgb(0, 0, 0);
-   width: 6px;
-   height: 200px;
-  }
-}
