@@ -4,9 +4,8 @@
 	display: flex;
 	font-family: $font-family-title;
 	text-transform: uppercase;
-
     @media screen and (min-width: 768px) {
-       gap: 5px;
+      gap: 5px;
     }
 
 	&__item {
@@ -27,7 +26,7 @@
             @media screen and (min-width: 768px) {
                 width: 70px;
                 height: 60px;
-                padding-top: 15px;
+                padding-top: 5px;
                 font-size: 43px;
             }
 		}
