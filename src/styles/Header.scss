@@ -43,12 +43,29 @@
 				-webkit-background-clip: text;
                 background-clip: text;
 				-webkit-text-fill-color: transparent;
+				// color: #000;
+				// background: #fff;
+				// mix-blend-mode: multiply;
+				// position: relative;
+
 				transform: translateX(10px);
 
 				@media screen and (min-width: 768px) {
 					transform: translateX(50px);
 				}
 			}
+
+			// &--friday:before {
+			// 	content: '';
+			// 	display: block;
+			// 	width: 100%;
+			// 	height: 100%;
+			// 	background: linear-gradient(to rigth, red, yellow);
+			// 	mix-blend-mode: screen;
+			// 	position: absolute;
+			// 	top: 0;
+			// 	left: 0;
+			// }
 		}
 
 		&-h2 {
