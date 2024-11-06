@@ -7,15 +7,22 @@
 
   &__euros {
     margin: 0px;
+
     font-size: $p-price-size-mobile;
 
+    @media (min-width: 720px) {
+      padding-top: 10px;
+
+    }
+
     @media (min-width: 1024px) {
+      padding-top: 10px;
       font-size: $p-price-size-desktop;
     }
   }
 
   &__iva {
-    margin: -5px;
+    margin: -10px;
     font-family: $font-family-friday;
     font-size: $p-info-iva-size-mobile;
 

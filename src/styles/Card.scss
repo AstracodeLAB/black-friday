@@ -4,7 +4,10 @@
   width: $margin-mobile;
   position: relative;
 
-  @media (min-width: 1024px) {
+  // @media (min-width: 1024px) {
+  //   width: $margin-desktop;
+  // }
+  @media (min-width: 1280px) {
     width: $margin-desktop;
   }
 
@@ -24,6 +27,8 @@
     font-size: $h3-size-mobile;
     font-family: $font-family-title ;
     color: $primary;
+    margin-bottom:0px;
+
 
     @media (min-width: 768px) {
       font-size: $h3-size-desktop;
@@ -50,7 +55,7 @@
   &__icon {
     text-align: end;
     padding-right: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 5px;
   }
 
   &__inside-box {
@@ -78,6 +83,11 @@
     color: $primary;
     list-style-type: none;
     text-align: center;
+    @media (min-width: 768px) {
+    font-size: $p-size-desktop;
+  }
+
+
   }
 
 }
