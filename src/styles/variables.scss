@@ -15,6 +15,7 @@ $gradient-background: linear-gradient(to bottom,
 #282a36,
 #09090c);
 
+
 // Tipografías
 $font-family-black: 'Anton', sans-serif;
 $font-family-friday: 'Barlow Condensed', sans-serif;
@@ -22,21 +23,27 @@ $font-family-subtitle: 'Barlow Condensed', sans-serif;
 $font-family-title: 'Barlow', sans-serif;
 
 // Tamaños para escritorio
-$h1-size-desktop: 6rem; // 96px
+$h1-size-desktop: 4rem; // 96px
 $h2-size-desktop: 1.5rem; // 24px
-$h3-size-desktop: 2rem; // 32px
-$p-size-desktop: 20px; // 20px
-$p-price-size-desktop: 64px; // 64px
-$p-info-iva-size-desktop: 13px; // 13px
+$h3-size-desktop: 1.43rem; // 32px
+$h4-size-desktop: 1.12rem; // 34px
+$p-size-desktop: 1rem; // 20px
+$p-price-size-desktop: 2.6rem; // 64px
+$p-info-iva-size-desktop: 0.8rem; // 13px
 $p-info-day-size-desktop: 1rem; // 16px
 $footer-size-desktop: 1rem; // 16px
 
 // Tamaños para móvil
-$h1-size-mobile: 4rem; // 64px
+$h1-size-mobile: 3rem; // 64px
 $h2-size-mobile: 1rem; // 16px
-$h3-size-mobile: 1.5rem; // 24px
-$p-size-mobile: 16px; // 16px
-$p-price-size-mobile: 40px; // 40px
-$p-info-iva-size-mobile: 11px; // 11px
+$h3-size-mobile: 1.25rem; // 24px
+$h4-size-mobile: 1rem; // 24px
+$p-size-mobile: 0.87rem; // 14px 
+$p-price-size-mobile: 2rem; // 40px
+$p-info-iva-size-mobile: 0.68rem; // 11px
 $p-info-day-size-mobile: 0.8rem; // 14px
 $footer-size-mobile: 0.8rem; // 14px
+
+//Margin Cards
+$margin-mobile: 270px;
+$margin-desktop: 450px;

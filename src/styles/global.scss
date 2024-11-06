@@ -7,7 +7,7 @@
 }
 
 .container {
-	height: 100vh;
+	height: 100%;
 	width: 90%;
 	background: $gradient-background;
 	margin: 0 auto;
@@ -21,29 +21,35 @@
 }
 
 .main {
+  text-align: center;
+
 }
 
-.services {
+.services_section {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 30px;
+	@media (min-width: 768px) {
+	flex-direction: row;
+	}
+
 }
+
 
 .counter {
     display: flex;
     flex-direction: column;
     align-items: center;
-	gap: 15px;
-
-	@media screen and (min-width: 768px) {
-		gap: 20px;
-	}
 
 	&__p {
 		color: $primary;
 		font-family: $font-family-subtitle;
-		font-size: 14px;
-		margin: 0 0 -10px 0;
+		font-size: $p-info-day-size-mobile;
+
 
         @media screen and (min-width: 768px) {
-            font-size: 16px;
+            font-size: $p-info-day-size-desktop;
         }
 	}
 }
