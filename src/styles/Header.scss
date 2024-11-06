@@ -1,55 +1,68 @@
 @use './variables.scss' as *;
 
 .header {
-	text-align: center;
 	width: 80vw;
 	border-bottom: 3px solid $secondary;
-  display:flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding-top:25px;
-  padding-bottom: 15px;
-  gap:10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding-top: 25px;
+	padding-bottom: 15px;
+	gap: 10px;
 
 	@media screen and (min-width: 768px) {
-		width: 70vw;
-    align-items: start;
-    gap: 0px;
+		// width: 70vw;
+		align-items: start;
+		gap: 0px;
+	}
 
+	&__astra {
+		width: 90px;
+
+		@media screen and (min-width: 768px) {
+			width: 100px;
+			margin-right: 10px;
+		}
+	}
+
+	&__a {
+		@media screen and (min-width: 768px) {
+			width: 100px;
+			height: 100px;
+			// margin-right: -90px;
+			// margin-top: -10px;
+		}
 	}
 
 	&__img {
 		width: 90px;
 
-
 		@media screen and (min-width: 768px) {
 			width: 100px;
-      margin-right: -90px;
 		}
 	}
 
 	&__title {
-    @media screen and (min-width: 768px) {
-      padding-top: 19px;
-    }
+		@media screen and (min-width: 768px) {
+			padding-top: 19px;
+		}
 
 		&-h1 {
 			text-transform: uppercase;
 			margin: 0;
 			line-height: 0.9;
 			font-size: $h1-size-mobile;
-      
-      
+
 			@media screen and (min-width: 768px) {
-      font-size: $h1-size-desktop;
+				font-size: $h1-size-desktop;
 			}
-      
+
 			&--black {
-        font-family: $font-family-black;
+				font-family: $font-family-black;
 				color: $primary;
-        font-weight: 100;
-        text-shadow: 4px 4px 4px #000;
+				font-weight: 100;
+				text-shadow: 4px 4px 4px #000;
 			}
 
 			&--friday {
@@ -57,9 +70,9 @@
 				background: $red;
 				color: transparent;
 				-webkit-background-clip: text;
-                background-clip: text;
+				background-clip: text;
 				transform: translateX(10px);
-        text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+				text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
 
 				@media screen and (min-width: 768px) {
 					transform: translateX(50px);
@@ -82,16 +95,16 @@
 		&-h2 {
 			margin: 0;
 			line-height: 0.9;
-      margin-left: 25px;
-      padding-top:5px;
+			margin-left: 25px;
+			padding-top: 5px;
 			font-family: $font-family-subtitle;
 			color: $primary;
 			font-size: $h2-size-mobile;
 			font-weight: lighter;
 
 			@media screen and (min-width: 768px) {
-        font-size: $h2-size-desktop;
-        margin-left: 250px;
+				font-size: $h2-size-desktop;
+				padding-left: 50px;
 			}
 		}
 	}
