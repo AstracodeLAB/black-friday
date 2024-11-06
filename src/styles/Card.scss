@@ -1,118 +1,111 @@
 @use './variables.scss' as *;
 
 .services {
-  width: $margin-mobile;
-  position: relative;
+	width: $margin-mobile;
+	position: relative;
 
-  // @media (min-width: 1024px) {
-  //   width: $margin-desktop;
-  // }
-  @media (min-width: 1280px) {
-    width: $margin-desktop;
-  }
+	// @media (min-width: 1024px) {
+	//   width: $margin-desktop;
+	// }
+	@media (min-width: 1280px) {
+		width: $margin-desktop;
+	}
 
-  &__box-title {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+	&__box-title {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
 
-    @media (min-width: 768px) {
-      justify-content: center;
-    }
+		@media (min-width: 768px) {
+			justify-content: center;
+		}
+	}
 
-  }
+	&__title {
+		font-size: $h3-size-mobile;
+		font-family: $font-family-title;
+		color: $primary;
+		margin-bottom: 0px;
 
-  &__title {
-    font-size: $h3-size-mobile;
-    font-family: $font-family-title ;
-    color: $primary;
-    margin-bottom:0px;
+		@media (min-width: 768px) {
+			font-size: $h3-size-desktop;
+		}
+	}
 
+	&__text {
+		padding: 10px;
+		margin-bottom: 0;
+		font-size: $p-size-mobile;
+		font-family: $font-family-subtitle;
+		color: $primary;
 
-    @media (min-width: 768px) {
-      font-size: $h3-size-desktop;
-    }
-  }
+		@media (min-width: 768px) {
+			font-size: $p-size-desktop;
+		}
+	}
 
+	&__box-gradient {
+		background-color: rgba(255, 255, 255, 0.04);
+	}
 
-  &__text {
-    padding: 10px;
-    margin-bottom: 0;
-    font-size: $p-size-mobile;
-    font-family: $font-family-subtitle;
-    color: $primary;
+	&__icon {
+		text-align: end;
+		padding-right: 15px;
+		padding-bottom: 5px;
+	}
 
-    @media (min-width: 768px) {
-      font-size: $p-size-desktop;
-    }
-  }
+	&__inside-box {
+		padding-bottom: 1px;
+	}
 
-  &__box-gradient {
-    background-color:rgba(255, 255, 255, 0.04);
-  }
+	&__inside {
+		margin: 5px;
+		font-size: $h4-size-mobile;
+		font-family: $font-family-subtitle;
+		color: $primary;
 
-  &__icon {
-    text-align: end;
-    padding-right: 15px;
-    padding-bottom: 5px;
-  }
+		@media (min-width: 768px) {
+			font-size: $h4-size-desktop;
+		}
+	}
 
-  &__inside-box {
-    padding-bottom: 15px;
-  }
+	&__inside-list {
+		padding-left: 0px;
+	}
 
-  &__inside {
-    margin: 5px;
-    font-size: $h4-size-mobile;
-    font-family: $font-family-subtitle;
-    color: $primary;
-
-    @media (min-width: 768px) {
-      font-size: $h4-size-desktop;
-    }
-  }
-
-  &__inside-list {
-    padding-left: 0px;
-  }
-
-  &__inside-items {
-    font-size: $p-size-mobile;
-    font-family: $font-family-subtitle;
-    color: $primary;
-    list-style-type: none;
-    text-align: center;
-    @media (min-width: 768px) {
-    font-size: $p-size-desktop;
-  }
-
-
-  }
-
+	&__inside-items {
+		font-size: $p-size-mobile;
+		font-family: $font-family-subtitle;
+		color: $primary;
+		list-style-type: none;
+		text-align: center;
+		@media (min-width: 768px) {
+			font-size: $p-size-desktop;
+		}
+	}
 }
 
 .hide {
-  display: none;
+	display: none;
 }
 
-
 .price__desktop {
-  display: none;
+	display: none;
 }
 
 .price__mobile {
-  display: inline-block;
-  margin-top: 15px;
-  padding-left: 15px;
+	display: inline-block;
+	margin-top: 15px;
+	padding-left: 15px;
 }
 
-@media(min-width: 768px) {
-  .price__desktop {
-    display: inline-block;
-  }
+@media (min-width: 768px) {
+	.price__desktop {
+		display: inline-block;
+	}
 
-  .price__mobile {
-    display: none;
-  }
+	.price__mobile {
+		display: none;
+	}
 }
