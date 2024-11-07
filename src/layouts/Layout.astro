@@ -13,26 +13,37 @@ const { description, title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="description" content={description} />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/png" href="/Whitelogolab.png" />
-        <meta name="generator" content={Astro.generator} />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@300;400&family=Barlow:wght@400&display=swap" rel="stylesheet">		
-        <title>{title}</title>
-    </head>
-    
-       <body class="body">
-            <div class="container">
-                <Header />
-                <slot />
-                <Footer />
-            </div>
-          
+<html lang='es'>
+	<head>
+		<meta charset='UTF-8' />
+		<meta name='description' content={description} />
+		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+		<link rel='icon' type='image/png' href='/Whitelogolab.png' />
+		<meta name='generator' content={Astro.generator} />
+		<link rel='preconnect' href='https://fonts.googleapis.com' />
+		<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+		<link
+			href='https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@300;400&family=Barlow:wght@400&display=swap'
+			rel='stylesheet'
+		/>
+		<title>{title}</title>
+		<!-- Google tag (gtag.js) -->
+		<script async src='https://www.googletagmanager.com/gtag/js?id=G-3LJTWYD1L9'></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+			gtag('config', 'G-3LJTWYD1L9');
+		</script>
+	</head>
 
-       </body>
+	<body class='body'>
+		<div class='container'>
+			<Header />
+			<slot />
+			<Footer />
+		</div>
+	</body>
 </html>
