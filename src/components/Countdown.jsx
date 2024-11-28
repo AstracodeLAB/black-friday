@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import '../styles/Countdown.scss';
 
 const BlackFridayCountdown = () => {
-	const targetDate = new Date('2024-11-29T00:00:00'); // Fecha de Black Friday
+	const targetDate = new Date('2024-11-30T00:00:00'); // Fecha de Black Friday
 	const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
 	useEffect(() => {
