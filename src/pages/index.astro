@@ -5,24 +5,33 @@ import Card from '../components/Card.astro';
 import Layout from '../layouts/Layout.astro';
 import Countdown from '../components/Countdown';
 import Button from '../components/Button.astro';
-import Price from '../components/Price.astro';
+// import Price from '../components/Price.astro';
+import Discount from '../components/Discount.jsx'; // 🔹 Nuevo componente React
 ---
 
 <Layout
-	title='Ofertas Black Friday en AstracodeLAB - Diseño y Desarrollo Web'
-	description='Aprovecha nuestras ofertas de Black Friday para tu Landing Page o Portfolio. Contrata diseño y desarrollo web profesional y gana visibilidad para tu negocio.'
+  title='Ofertas Black Friday en AstracodeLAB - Diseño y Desarrollo Web'
+  description='Aprovecha nuestras ofertas de Black Friday y consigue un 20% de descuento extra. Contrata diseño y desarrollo web profesional con AstracodeLAB.'
 >
-	<main class='main'>
-		<section class='services_section'>
-			{cardData.map((card) => <Card {...card} />)}
+  <main class='main'>
+		<section class='discount'>
+			<Discount client:load />
 		</section>
-		<div class='price__desktop'>
+		
+		<!-- <div class='price__desktop'>
 			<Price />
-		</div>
-		<section class='counter'>
-			<p class='counter__p'>Oferta válida hasta las 00:00 del viernes 29 de Noviembre</p>
-			<Countdown client:load />
-			<Button />
-		</section>
-	</main>
+			</div> -->
+			
+			<!-- 🔹 Nueva sección de descuento -->
+			
+			<section class='counter'>
+					<Countdown client:load />
+					
+					<p class='counter__p'>Oferta válida hasta las 00:00 del viernes 28 de Noviembre</p>
+					<section class='services_section'>
+						{cardData.map((card) => <Card {...card} />)}
+					</section>
+      <!-- <Button /> -->
+    </section>
+  </main>
 </Layout>

@@ -13,6 +13,7 @@
 		color: $primary;
 		box-shadow: 4px 4px 4px #000;
 		border-radius: 10px 10px 0 0;
+		
 
 		&-number {
 			margin: 0;
@@ -20,7 +21,8 @@
 			width: 50px;
 			height: 52px;
 			font-size: 38px;
-			background-color: $secondary;
+			font-weight: bold;
+			background-color: rgba(0, 0, 0, 0.306);
 			border-radius: 10px 10px 0 0;
 
             @media screen and (min-width: 768px) {

@@ -1,0 +1,112 @@
+.discount {
+  &__container {
+    text-align: center;
+    // margin: 4rem 0;
+    color: #fff;
+  }
+
+  &__text {
+    font-size: 2rem;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+
+    span {
+      color: #ff1f1f;
+    }
+  }
+
+  &__button {
+    // margin-top: 1.5rem;
+    background: linear-gradient(90deg, #ff1f1f 0%, #ff5a5a 100%);
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(255, 31, 31, 0.5);
+    }
+  }
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  &__content {
+    position: relative;
+    background: #1a1a1a;
+    border-radius: 1rem;
+    padding: 2rem;
+    z-index: 60;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+    color: #fff;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__input {
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    outline: none;
+    font-size: 1rem;
+  }
+
+  &__submit {
+    background: #ff1f1f;
+    border: none;
+    padding: 0.8rem 1rem;
+    color: #fff;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: #ff3d3d;
+    }
+  }
+
+  &__success {
+    font-size: 1.2rem;
+    color: #00ff9c;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

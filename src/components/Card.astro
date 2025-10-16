@@ -1,41 +1,39 @@
 ---
 import '../styles/Card.scss';
 import Icon from '../assets/Icon_Add.astro';
-import Price from './Price.astro';
+// import Price from './Price.astro';
 const { title, description, large_description_title, large_description_items } = Astro.props;
 const showDescriptionID = `show_description_${Math.random()}`;
 let isVisible = false;
 ---
 
 <article class='services'>
-	<div class='services__box-title'>
-		<h3 class='services__title'>{title}</h3>
-		<div class='price__mobile'>
-			<Price />
-		</div>
-	</div>
-	<div class='services__box-gradient'>
-		<p class='services__text'>{description}</p>
-		<div class='services__icon'>
+  <div class='services__box-title'>
+    <h3 class='services__title'>{title}</h3>
+    <!-- <div class='price__mobile'> -->
+    <!-- <Price /> -->
+    <!-- </div> -->
+  </div>
+  <div class='services__box-gradient'>
+    <p class='services__text'>{description}</p>
+    <!-- <div class='services__icon'>
 			<Icon data-id={showDescriptionID} />
-		</div>
+		</div> -->
 
-		<div class='services__inside-box hide'>
+    <!-- <div class='services__inside-box hide'>
 			<h4 class='services__inside'>{large_description_title}</h4>
 			<ul class='services__inside-list'>
 				{large_description_items.map((item) => <li class='services__inside-items'>{item}</li>)}
 			</ul>
-		</div>
-	</div>
+		</div> -->
+  </div>
 </article>
 
-
-
 <script>
-	function toggleVisibility(el: HTMLElement) {
-		el.parentElement.querySelector('.services__inside-box').classList.toggle('hide');
-	}
-	document
-		.querySelectorAll('.services__icon')
-		.forEach((el) => el.addEventListener('click', () => toggleVisibility(el)));
+  function toggleVisibility(el: HTMLElement) {
+    el.parentElement.querySelector('.services__inside-box').classList.toggle('hide');
+  }
+  document
+    .querySelectorAll('.services__icon')
+    .forEach((el) => el.addEventListener('click', () => toggleVisibility(el)));
 </script>

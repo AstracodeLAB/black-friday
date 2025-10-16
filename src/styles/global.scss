@@ -30,11 +30,11 @@
 .services_section {
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
+	align-items: center;
 	gap: 30px;
-	@media (min-width: 768px) {
-	flex-direction: row;
-	}
+	// @media (min-width: 768px) {
+	// flex-direction: row;
+	// }
 
 }
 
