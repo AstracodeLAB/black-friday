@@ -4,12 +4,17 @@
 	width: $margin-mobile;
 	position: relative;
 
+	@media (min-width: 768px) {
+		width: 100%;
+		max-width: 400px;
+	}
+
 	// @media (min-width: 1024px) {
 	//   width: $margin-desktop;
 	// }
-	@media (min-width: 1280px) {
-		width: $margin-desktop;
-	}
+	// @media (min-width: 1280px) {
+	// 	width: $margin-desktop;
+	// }
 
 	&__box-title {
 		display: flex;
@@ -42,6 +47,7 @@
 
 		@media (min-width: 768px) {
 			font-size: $p-size-desktop;
+			padding: 20px;
 		}
 	}
 

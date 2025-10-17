@@ -2,15 +2,15 @@ export const cardData = [
   {
     title: '',
     description:
-      'En AstracodeLAB celebramos el Black Friday con un 20% de descuento en todos nuestros servicios de diseño y desarrollo web. Si quieres crear tu página web profesional',
-    large_description_title: '¿Qué incluye la Landing Page?',
-    large_description_items: [
-      '• Diseño de una sola página.',
-      '• Información sobre el producto o promoción.',
-      '• Formularios de contacto.',
-      '• Sobre nosotros.',
-      '• Enlaces a tus redes sociales.',
-    ],
+      'En AstracodeLAB celebramos el Black Friday con un 20% de descuento en nuestros servicios de landing page y portfolios web. Obtén tu código de descuento haciendo click en el botón y canjéalo antes de que el contador se ponga a 0.',
+    // large_description_title: '¿Qué incluye la Landing Page?',
+    // large_description_items: [
+    //   '• Diseño de una sola página.',
+    //   '• Información sobre el producto o promoción.',
+    //   '• Formularios de contacto.',
+    //   '• Sobre nosotros.',
+    //   '• Enlaces a tus redes sociales.',
+    // ],
   },
   // {
   //   title:"PORTFOLIO WEB",

@@ -1,24 +1,51 @@
 ---
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInstagram, faFacebook, faLinkedin, faThreads } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram, faFacebook, faLinkedin, faThreads } from '@fortawesome/free-brands-svg-icons';
 import '../styles/Footer.scss';
 ---
 
-<footer class="footer">
-    <p class="footer__p">@astracodelab</p>
-    <nav class="footer__nav">
-        <a class="footer__nav-link" href="https://www.instagram.com/astracodelab/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" >
-            <FontAwesomeIcon icon={faInstagram} />
-        </a>
-        <a class="footer__nav-link" href="https://www.facebook.com/people/Astracodelab/61564205213789/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" >
-            <FontAwesomeIcon icon={faFacebook} />
-        </a>
-        <a class="footer__nav-link" href="https://www.linkedin.com/company/astracodelab" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" >
-            <FontAwesomeIcon icon={faLinkedin} />
-        </a>
-        <a class="footer__nav-link" href="https://www.threads.net/@astracodelab" target="_blank" rel="noopener noreferrer" aria-label="Threads" >
-            <FontAwesomeIcon icon={faThreads} />
-        </a>
-    </nav>
-    <a class="footer__web" href="https://astracodelab.com" target="_blank" rel="noopener noreferrer">Nuestra web</a>
+<footer class='footer'>
+  <a class='footer__logo' href='https://astracodelab.com' target='_blank' rel='noopener noreferrer'
+    ><img src='/images/blancoTexto.svg' alt='' /></a
+  >
+  <!-- <p class="footer__p">@astracodelab</p> -->
+  <nav class='footer__nav'>
+    <a
+      class='footer__nav-link'
+      href='https://www.instagram.com/astracodelab/'
+      target='_blank'
+      rel='noopener noreferrer'
+      aria-label='Instagram'
+    >
+      <FontAwesomeIcon icon={faInstagram} />
+    </a>
+    <a
+      class='footer__nav-link'
+      href='https://www.facebook.com/people/Astracodelab/61564205213789/'
+      target='_blank'
+      rel='noopener noreferrer'
+      aria-label='Facebook'
+    >
+      <FontAwesomeIcon icon={faFacebook} />
+    </a>
+    <a
+      class='footer__nav-link'
+      href='https://www.linkedin.com/company/astracodelab'
+      target='_blank'
+      rel='noopener noreferrer'
+      aria-label='LinkedIn'
+    >
+      <FontAwesomeIcon icon={faLinkedin} />
+    </a>
+    <a
+      class='footer__nav-link'
+      href='https://www.threads.net/@astracodelab'
+      target='_blank'
+      rel='noopener noreferrer'
+      aria-label='Threads'
+    >
+      <FontAwesomeIcon icon={faThreads} />
+    </a>
+  </nav>
+  <a class='footer__web' href='https://astracodelab.com' target='_blank' rel='noopener noreferrer'>Nuestra web</a>
 </footer>

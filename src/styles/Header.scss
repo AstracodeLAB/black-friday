@@ -4,7 +4,7 @@
 	width: 80vw;
 	border-bottom: 3px solid $secondary;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	padding-top: 25px;
@@ -13,7 +13,7 @@
 
 	@media screen and (min-width: 768px) {
 		// width: 70vw;
-		align-items: start;
+		// align-items: start;
 		gap: 0px;
 	}
 
@@ -62,6 +62,7 @@
 			}
 
 			&--black {
+				text-align: center;
         display:block;
 				font-family: $font-family-black;
 				color: $primary;
@@ -70,17 +71,18 @@
 			}
 
 			&--friday {
+				text-align: center;
         display: block;
 				font-family: $font-family-friday;
 				background: $red;
 				color: transparent;
 				-webkit-background-clip: text;
 				background-clip: text;
-				transform: translateX(10px);
+				// transform: translateX(10px);
 				text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
 
 				@media screen and (min-width: 768px) {
-					transform: translateX(50px);
+					// transform: translateX(50px);
 				}
 			}
 
@@ -88,8 +90,8 @@
 
 		&-h2 {
 			margin: 0;
-			line-height: 0.9;
-			margin-left: 25px;
+			// line-height: 0.9;
+			// margin-left: 25px;
 			padding-top: 0px;
 			font-family: $font-family-subtitle;
 			color: $primary;
@@ -98,7 +100,7 @@
 
 			@media screen and (min-width: 768px) {
 				font-size: $h2-size-desktop;
-				padding-left: 50px;
+				// padding-left: 50px;
 			}
 		}
 	}
