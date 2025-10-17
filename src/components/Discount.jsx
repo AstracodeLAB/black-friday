@@ -21,8 +21,12 @@ const Discount = () => {
   return (
     <>
       <div className='discount__container'>
-        <p className='discount__text'>Obtén tu <span>20% de descuento</span></p>
-        <button className='discount__button' onClick={() => setIsOpen(true)}>¡Lo quiero!</button>
+        <p className='discount__text'>
+          Obtén tu <span>20% de descuento</span>
+        </p>
+        <button className='discount__button' onClick={() => setIsOpen(true)}>
+          ¡Lo quiero!
+        </button>
       </div>
 
       {isOpen && (
@@ -32,7 +36,29 @@ const Discount = () => {
             {!submitted ? (
               <>
                 <h3 className='modal__title'>Recibe tu código de descuento</h3>
-                <form className='modal__form' onSubmit={handleSubmit}>
+                <form
+                  name='blackfriday-leads'
+                  method='POST'
+                  data-netlify='true'
+                  netlify-honeypot='bot-field'
+                  className='modal__form'
+                  onSubmit={(e) => {
+                    // Se usa HTML submit normal para Netlify
+                    setSubmitted(true);
+                    setTimeout(() => {
+                      setIsOpen(false);
+                      setEmail('');
+                      setSubmitted(false);
+                    }, 2500);
+                  }}
+                >
+                  {/* Campo oculto para Netlify */}
+                  <input type='hidden' name='form-name' value='blackfriday-leads' />
+                  <p hidden>
+                    <label>
+                      No llenar este campo: <input name='bot-field' />
+                    </label>
+                  </p>
                   <input
                     type='email'
                     placeholder='Introduce tu email'
@@ -41,7 +67,9 @@ const Discount = () => {
                     required
                     className='modal__input'
                   />
-                  <button type='submit' className='modal__submit'>Enviar</button>
+                  <button type='submit' className='modal__submit'>
+                    Enviar
+                  </button>
                 </form>
               </>
             ) : (
