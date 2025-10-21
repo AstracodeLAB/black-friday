@@ -6,14 +6,38 @@ const Discount = () => {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = () => {
-    setSubmitted(true);
-    setTimeout(() => {
-      setIsOpen(false);
-      setEmail('');
-      setSubmitted(false);
-    }, 2500);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({
+        'form-name': form.getAttribute('name'),
+        email: email,
+      }).toString(),
+    })
+      .then(() => {
+        setSubmitted(true);
+        setTimeout(() => {
+          setIsOpen(false);
+          setEmail('');
+          setSubmitted(false);
+        }, 2500);
+      })
+      .catch((error) => alert(error));
   };
+
+  // const handleSubmit = () => {
+  //   setSubmitted(true);
+  //   setTimeout(() => {
+  //     setIsOpen(false);
+  //     setEmail('');
+  //     setSubmitted(false);
+  //   }, 2500);
+  // };
 
   // const handleSubmit = (e) => {
   //   e.preventDefault();
@@ -45,7 +69,6 @@ const Discount = () => {
             {!submitted ? (
               <>
                 <h3 className='modal__title'>Recibe tu código de descuento</h3>
-                
 
                 <form name='discount' method='POST' data-netlify='true' className='modal__form' onSubmit={handleSubmit}>
                   {/* Campo oculto requerido por Netlify */}
