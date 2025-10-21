@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import '../styles/CookiesBanner.scss';
+import { loadAnalytics } from '../utils/analytics';
 
 const CookiesBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -13,6 +14,7 @@ const CookiesBanner = () => {
 
   const handleAccept = () => {
     localStorage.setItem('cookiesAccepted', 'true');
+    loadAnalytics(); // Carga GA
     setIsVisible(false);
   };
 
