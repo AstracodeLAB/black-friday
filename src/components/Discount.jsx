@@ -37,10 +37,7 @@ const Discount = () => {
               <>
                 <h3 className='modal__title'>Recibe tu código de descuento</h3>
                 <form
-                  name='blackfriday-leads'
-                  method='POST'
-                  data-netlify='true'
-                  netlify-honeypot='bot-field'
+                  netlify
                   className='modal__form'
                   onSubmit={(e) => {
                     // Se usa HTML submit normal para Netlify
@@ -52,13 +49,6 @@ const Discount = () => {
                     }, 2500);
                   }}
                 >
-                  {/* Campo oculto para Netlify */}
-                  <input type='hidden' name='form-name' value='blackfriday-leads' />
-                  <p hidden>
-                    <label>
-                      No llenar este campo: <input name='bot-field' />
-                    </label>
-                  </p>
                   <input
                     type='email'
                     placeholder='Introduce tu email'
