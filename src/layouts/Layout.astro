@@ -45,6 +45,10 @@ const { description, title } = Astro.props;
   </head>
 
   <body class='body'>
+    <!-- {/* Formulario oculto para que Netlify lo pille */} -->
+    <form name='discount' netlify hidden>
+      <input type='email' name='email' />
+    </form>
     <!-- Google Tag Manager (noscript) -->
     <noscript
       ><iframe

@@ -6,10 +6,7 @@ const Discount = () => {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (email.trim() === '') return;
-    // Aquí podrías conectar con tu backend o una automatización de correo
+  const handleSubmit = () => {
     setSubmitted(true);
     setTimeout(() => {
       setIsOpen(false);
@@ -17,6 +14,18 @@ const Discount = () => {
       setSubmitted(false);
     }, 2500);
   };
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   if (email.trim() === '') return;
+  //   // Aquí podrías conectar con tu backend o una automatización de correo
+  //   setSubmitted(true);
+  //   setTimeout(() => {
+  //     setIsOpen(false);
+  //     setEmail('');
+  //     setSubmitted(false);
+  //   }, 2500);
+  // };
 
   return (
     <>
@@ -36,21 +45,14 @@ const Discount = () => {
             {!submitted ? (
               <>
                 <h3 className='modal__title'>Recibe tu código de descuento</h3>
-                <form
-                  netlify
-                  className='modal__form'
-                  onSubmit={(e) => {
-                    // Se usa HTML submit normal para Netlify
-                    setSubmitted(true);
-                    setTimeout(() => {
-                      setIsOpen(false);
-                      setEmail('');
-                      setSubmitted(false);
-                    }, 2500);
-                  }}
-                >
+                
+
+                <form name='discount' method='POST' data-netlify='true' className='modal__form' onSubmit={handleSubmit}>
+                  {/* Campo oculto requerido por Netlify */}
+                  <input type='hidden' name='form-name' value='discount' />
                   <input
                     type='email'
+                    name='email'
                     placeholder='Introduce tu email'
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
