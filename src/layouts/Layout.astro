@@ -3,6 +3,7 @@ import '../styles/global.scss';
 
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import CookiesBanner from '../components/CookiesBanner';
 
 interface Props {
   title: string;
@@ -63,6 +64,7 @@ const { description, title } = Astro.props;
       <Header />
       <slot />
       <Footer />
+      <CookiesBanner client:load />
     </div>
   </body>
 </html>
