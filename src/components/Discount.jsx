@@ -30,27 +30,6 @@ const Discount = () => {
       .catch((error) => alert(error));
   };
 
-  // const handleSubmit = () => {
-  //   setSubmitted(true);
-  //   setTimeout(() => {
-  //     setIsOpen(false);
-  //     setEmail('');
-  //     setSubmitted(false);
-  //   }, 2500);
-  // };
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   if (email.trim() === '') return;
-  //   // Aquí podrías conectar con tu backend o una automatización de correo
-  //   setSubmitted(true);
-  //   setTimeout(() => {
-  //     setIsOpen(false);
-  //     setEmail('');
-  //     setSubmitted(false);
-  //   }, 2500);
-  // };
-
   return (
     <>
       <div className='discount__container'>
