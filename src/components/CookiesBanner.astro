@@ -9,8 +9,8 @@ import '../styles/CookiesBanner.scss';
     tráfico, personalizar contenidos y mostrarte publicidad relevante. Puedes aceptar todas las cookies para disfrutar
     de la mejor experiencia posible, o solo aceptar las necesarias para navegar por el sitio. Para más información,
     consulta nuestra <a href='https://astracodelab.com/privacy-policy/' rel='noopener noreferrer' target='_blank'
-      >Política de cookies</a
-    >.
+      >Política de cookies.</a
+    >
   </p>
   <div class='cookie-buttons'>
     <button id='accept-all' class='btn'>Aceptar todas</button>
@@ -38,12 +38,14 @@ import '../styles/CookiesBanner.scss';
       setCookie('analytics', 'true', 365);
       setCookie('ads', 'true', 365);
       banner.style.display = 'none';
+      location.reload();
     });
 
     document.getElementById('accept-necessary')?.addEventListener('click', () => {
       setCookie('cookiesChoice', 'necessary', 365);
       setCookie('essential', 'true', 365);
       banner.style.display = 'none';
+      location.reload();
     });
   });
 </script>
