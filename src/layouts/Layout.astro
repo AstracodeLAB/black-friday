@@ -30,8 +30,32 @@ const { description, title } = Astro.props;
       rel='stylesheet'
     />
     <title>{title}</title>
-    <!-- Google Tag Manager -->
+
+    <!-- ✅ Google Tag Manager se carga solo si el usuario ha aceptado -->
     <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const cookies = document.cookie;
+        const consentAll = cookies.includes('cookiesChoice=all');
+        const consentAnalytics = cookies.includes('analytics=true');
+
+        if (consentAll || consentAnalytics) {
+          (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+            const f = d.getElementsByTagName(s)[0];
+            const j = d.createElement(s);
+            const dl = l !== 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+          })(window, document, 'script', 'dataLayer', 'GTM-NK2JFCLS');
+        }
+      });
+    </script>
+    <!-- ✅ Fin del control de carga de GTM -->
+
+    <!-- Google Tag Manager -->
+    <!-- <script>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
         w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
@@ -42,7 +66,7 @@ const { description, title } = Astro.props;
         j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
         f.parentNode.insertBefore(j, f);
       })(window, document, 'script', 'dataLayer', 'GTM-NK2JFCLS');
-    </script>
+    </script> -->
     <!-- End Google Tag Manager -->
   </head>
 

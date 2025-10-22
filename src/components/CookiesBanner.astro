@@ -2,45 +2,48 @@
 import '../styles/CookiesBanner.scss';
 ---
 
-<div id="cookie-banner" class="cookie-banner">
-  
-  <h3 class="cookie-banner__title">Utilizamos cookies para mejorar tu experiencia en nuestro sitio web.</h3>
-  <p class="cookie-banner__paragraph">Algunas cookies son esenciales para el funcionamiento de la página, mientras que otras nos ayudan a analizar el tráfico, personalizar contenidos y mostrarte publicidad relevante.
-    Puedes aceptar todas las cookies para disfrutar de la mejor experiencia posible, o solo aceptar las necesarias para navegar por el sitio.
-    Para más información, consulta nuestra Política de cookies
-    .</p>
-  <div class="cookie-buttons">
-    <button id="accept-all" class="btn">Aceptar todas</button>
-    <button id="accept-necessary" class="btn btn-secondary">Solo necesarias</button>
+<div id='cookie-banner' class='cookie-banner'>
+  <h3 class='cookie-banner__title'>Utilizamos cookies para mejorar tu experiencia en nuestro sitio web.</h3>
+  <p class='cookie-banner__paragraph'>
+    Algunas cookies son esenciales para el funcionamiento de la página, mientras que otras nos ayudan a analizar el
+    tráfico, personalizar contenidos y mostrarte publicidad relevante. Puedes aceptar todas las cookies para disfrutar
+    de la mejor experiencia posible, o solo aceptar las necesarias para navegar por el sitio. Para más información,
+    consulta nuestra <a href='https://astracodelab.com/privacy-policy/' rel='noopener noreferrer' target='_blank'
+      >Política de cookies</a
+    >.
+  </p>
+  <div class='cookie-buttons'>
+    <button id='accept-all' class='btn'>Aceptar todas</button>
+    <button id='accept-necessary' class='btn btn-secondary'>Solo necesarias</button>
   </div>
 </div>
 
-<script type="module">
-document.addEventListener('DOMContentLoaded', () => {
-  const banner = document.getElementById("cookie-banner");
-  if (!banner) return;
+<script type='module'>
+  document.addEventListener('DOMContentLoaded', () => {
+    const banner = document.getElementById('cookie-banner');
+    if (!banner) return;
 
-  if (!document.cookie.includes("cookiesChoice")) {
-    banner.style.display = "flex";
-  }
+    if (!document.cookie.includes('cookiesChoice')) {
+      banner.style.display = 'flex';
+    }
 
-  function setCookie(name, value, days) {
-    const expires = new Date(Date.now() + days*24*60*60*1000).toUTCString();
-    document.cookie = `${name}=${value}; path=/; expires=${expires}; SameSite=Lax`;
-  }
+    function setCookie(name, value, days) {
+      const expires = new Date(Date.now() + days * 24 * 60 * 60 * 1000).toUTCString();
+      document.cookie = `${name}=${value}; path=/; expires=${expires}; SameSite=Lax`;
+    }
 
-  document.getElementById("accept-all")?.addEventListener("click", () => {
-    setCookie("cookiesChoice", "all", 365);
-    setCookie("essential", "true", 365);
-    setCookie("analytics", "true", 365);
-    setCookie("ads", "true", 365);
-    banner.style.display = "none";
+    document.getElementById('accept-all')?.addEventListener('click', () => {
+      setCookie('cookiesChoice', 'all', 365);
+      setCookie('essential', 'true', 365);
+      setCookie('analytics', 'true', 365);
+      setCookie('ads', 'true', 365);
+      banner.style.display = 'none';
+    });
+
+    document.getElementById('accept-necessary')?.addEventListener('click', () => {
+      setCookie('cookiesChoice', 'necessary', 365);
+      setCookie('essential', 'true', 365);
+      banner.style.display = 'none';
+    });
   });
-
-  document.getElementById("accept-necessary")?.addEventListener("click", () => {
-    setCookie("cookiesChoice", "necessary", 365);
-    setCookie("essential", "true", 365);
-    banner.style.display = "none";
-  });
-});
 </script>
