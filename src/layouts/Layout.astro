@@ -3,7 +3,7 @@ import '../styles/global.scss';
 
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import CookiesBanner from '../components/CookiesBanner';
+import CookiesBanner from '../components/CookiesBanner.astro';
 
 interface Props {
   title: string;
@@ -18,7 +18,7 @@ const { description, title } = Astro.props;
   <head>
     <meta charset='UTF-8' />
     <meta name='description' content={description} />
-    <link rel='canonical' href='https://blackfriday2024.astracodelab.com/' />
+    <link rel='canonical' href='https://blackfriday2025.astracodelab.com/' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <link rel='icon' type='image/svg+xml' href='/images/blanco.svg' />
 
@@ -64,7 +64,7 @@ const { description, title } = Astro.props;
       <Header />
       <slot />
       <Footer />
-      <CookiesBanner client:load />
+      <CookiesBanner />
     </div>
   </body>
 </html>
