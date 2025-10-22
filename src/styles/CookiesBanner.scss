@@ -71,11 +71,16 @@
   min-width: 9.375rem;
 
   &:hover {
-    background-color: $primary;
-    color: $secondary;
+    background-color: $secondary;
+    color: $primary;
   }
 }
 .btn-secondary {
-  background-color: #596c75;
-  color: $secondary;
+  background-color: $secondary;
+  color: $primary;
+
+  &:hover {
+    background-color: $primary;
+    color: $secondary;
+  }
 }
